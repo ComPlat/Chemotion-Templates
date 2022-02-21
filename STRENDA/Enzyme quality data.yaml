@@ -1,0 +1,469 @@
+{
+  eln: {
+    version: '1.0.3',
+    base_revision: 'c55e64ec712a688f27e80d0be08f8db256da0a08',
+    current_revision: '1db318d0ab9d2185df284356d43b0af923558fd2\n'
+  },
+  uuid: '2598b5b5-c31f-4ceb-ab0a-c30bea0bc3f6',
+  klass: 'SegmentKlass',
+  layers: {
+    actdet: {
+      key: 'actdet',
+      cols: 1,
+      color: 'none',
+      label: 'Details on activation data',
+      style: 'panel_generic_heading',
+      fields: [
+        {
+          type: 'textarea',
+          field: 'methods',
+          label: 'Time-dependence and reversibility methods description',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'textarea',
+          field: 'types',
+          label: 'activation types details',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        }
+      ],
+      position: 8
+    },
+    details: {
+      key: 'details',
+      cols: 1,
+      label: 'Details on inhibition  data',
+      fields: [
+        {
+          type: 'textarea',
+          field: 'methods',
+          label: 'Time-dependence and reversibility methods description',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'textarea',
+          field: 'types',
+          label: 'Inhibition types details',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          description: '',
+          text_sub_fields: []
+        }
+      ],
+      position: 5
+    },
+    required: {
+      key: 'required',
+      cols: 1,
+      color: 'none',
+      label: 'Information required on kinetic parameters',
+      style: 'panel_generic_heading',
+      fields: [
+        {
+          type: 'textarea',
+          field: 'parameter',
+          label: 'How were the given parameters obtained?',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          description: 'e.g., non-linear curve fitting using least squares, non- parametric method such as direct linear plot, linear  regression to transformed form of rate equation. Note: if commercial computer programs are used, determine which were used',
+          text_sub_fields: []
+        },
+        {
+          type: 'textarea',
+          field: 'Model',
+          label: 'Model used to determine the parameters',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          description: 'With explanation of why is the chosen model considered to be the “right” model. Report any measures of quality of fit, and for any  alternative models considered.',
+          text_sub_fields: []
+        },
+        {
+          type: 'textarea',
+          field: 'inhibition',
+          label: 'high-substrate inhibition',
+          default: '',
+          position: 3,
+          required: false,
+          sub_fields: [],
+          description: 'Details on high-substrate inhibition, if observed, with Ki value',
+          text_sub_fields: []
+        }
+      ],
+      position: 3
+    },
+    activation: {
+      key: 'activation',
+      cols: 4,
+      color: 'none',
+      label: 'Data required for reporting activation data',
+      style: 'panel_generic_heading',
+      fields: [
+        {
+          type: 'checkbox',
+          field: 'Time',
+          label: 'Time-dependent',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'reversible',
+          label: 'Reversible',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'competitive',
+          label: 'Competitive',
+          default: '',
+          position: 3,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'tight',
+          label: 'Tight-binding',
+          default: '',
+          position: 4,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        }
+      ],
+      position: 6
+    },
+    functional: {
+      key: 'functional',
+      cols: 2,
+      color: 'none',
+      label: 'Required data for all enzyme functional data',
+      style: 'panel_generic_heading',
+      fields: [
+        {
+          type: 'checkbox',
+          field: 'Specification',
+          label: 'Relative to subunit',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'relative',
+          label: 'Relative to oligomeric form',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'table',
+          field: 'table',
+          label: 'table',
+          default: '',
+          position: 3,
+          required: false,
+          sub_fields: [
+            {
+              id: '829bdce0-92a3-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Experiment no'
+            },
+            {
+              id: '96bcc180-92a3-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Changes'
+            },
+            {
+              id: 'b6d06d00-92a3-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Standard error'
+            },
+            {
+              id: 'c33fb6e0-92a3-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Standard deviation'
+            },
+            {
+              id: 'e3e1bfb0-92a3-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Confidence limits'
+            },
+            {
+              id: 'ec583110-92a3-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Q1'
+            },
+            {
+              id: '058b4d70-92a4-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Q2'
+            },
+            {
+              id: '0f68a1d0-92a4-11ec-bdcb-83947351ebe3',
+              type: 'text',
+              value: '',
+              col_name: 'Q3'
+            }
+          ],
+          description: 'Indicate what changed between replicates; just repeat reactions, different enzyme preparations, different ways, alternative staff, different laboratories',
+          text_sub_fields: []
+        }
+      ],
+      position: 1
+    },
+    inhibition: {
+      key: 'inhibition',
+      cols: 4,
+      color: 'none',
+      label: 'Data required for reporting inhibition  data',
+      style: 'panel_generic_heading',
+      fields: [
+        {
+          type: 'checkbox',
+          field: 'Time',
+          label: 'Time-dependent',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'reversible',
+          label: 'Reversible',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'competitive',
+          label: 'Competitive',
+          default: '',
+          position: 3,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'checkbox',
+          field: 'tight',
+          label: 'Tight-binding',
+          default: '',
+          position: 4,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        }
+      ],
+      position: 4
+    },
+    parameters: {
+      key: 'parameters',
+      cols: 3,
+      color: 'none',
+      label: 'Data necessary for reporting kinetic parameters',
+      style: 'panel_generic_heading',
+      fields: [
+        {
+          type: 'text',
+          field: 'equation',
+          label: 'Kinetic equation',
+          default: '',
+          position: 1,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'text',
+          field: 'model',
+          label: 'Model',
+          default: '',
+          position: 2,
+          required: false,
+          sub_fields: [],
+          placeholder: 'e.g., Michaelis-Menten',
+          text_sub_fields: []
+        },
+        {
+          type: 'text',
+          field: 'variable',
+          label: 'Variables',
+          default: '',
+          position: 3,
+          required: false,
+          sub_fields: [],
+          placeholder: 'e.g., varying  concentration of ATP, fixed glucose or v = Vmax / (1 +  KA/[2-aminopropane] + KB/[2-butanone])',
+          text_sub_fields: []
+        },
+        {
+          type: 'system-defined',
+          field: 'kcat',
+          label: 'Kcat',
+          default: '',
+          position: 4,
+          required: false,
+          sub_fields: [],
+          option_layers: 'turnover_number',
+          text_sub_fields: []
+        },
+        {
+          type: 'text',
+          field: 'Vmax',
+          label: 'Vmax',
+          default: '',
+          position: 5,
+          required: false,
+          sub_fields: [],
+          option_layers: 'reaction_rate',
+          text_sub_fields: []
+        },
+        {
+          type: 'system-defined',
+          field: 'Km',
+          label: 'Km',
+          default: '',
+          position: 6,
+          required: false,
+          sub_fields: [],
+          option_layers: 'molarity',
+          text_sub_fields: []
+        },
+        {
+          type: 'formula-field',
+          field: 'kcatKm',
+          label: 'Kcat/Km',
+          default: '',
+          formula: 'kcat/Km',
+          position: 7,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'system-defined',
+          field: 'S',
+          label: 'S0.5 ',
+          default: '',
+          position: 8,
+          required: false,
+          sub_fields: [],
+          option_layers: 'molarity',
+          text_sub_fields: []
+        },
+        {
+          type: 'text',
+          field: 'cooperativity',
+          label: 'cooperativity coefficient',
+          default: '',
+          position: 9,
+          required: false,
+          sub_fields: [],
+          description: 'Hill coefficient, saturation ratio (RS) or  other coefficients of cooperativity',
+          placeholder: 'e.g., Hill coefficient',
+          text_sub_fields: []
+        },
+        {
+          type: 'integer',
+          field: 'value',
+          label: 'Cooperativity coefficient value',
+          default: '',
+          position: 10,
+          required: false,
+          sub_fields: [],
+          text_sub_fields: []
+        },
+        {
+          type: 'table',
+          field: 'KM2',
+          label: 'KM2',
+          default: '',
+          position: 11,
+          required: false,
+          sub_fields: [
+            {
+              id: '3c0cb1f0-5847-11ec-ac2d-c11f7a2c60d7',
+              type: 'text',
+              value: '',
+              col_name: 'co-substrates'
+            },
+            {
+              id: '462adfe0-5847-11ec-ac2d-c11f7a2c60d7',
+              type: 'text',
+              value: '',
+              col_name: 'KM2 constant'
+            }
+          ],
+          text_sub_fields: []
+        },
+        {
+          type: 'table',
+          field: 'KP',
+          label: 'KP',
+          default: '',
+          position: 12,
+          required: false,
+          sub_fields: [
+            {
+              id: '907d8430-5847-11ec-ac2d-c11f7a2c60d7',
+              type: 'text',
+              value: '',
+              col_name: 'Product'
+            },
+            {
+              id: '9386cc90-5847-11ec-ac2d-c11f7a2c60d7',
+              type: 'text',
+              value: '',
+              col_name: 'KP constant'
+            }
+          ],
+          text_sub_fields: []
+        }
+      ],
+      position: 2
+    }
+  },
+  select_options: {}
+}

@@ -1,0 +1,1185 @@
+{
+    eln: {
+      version: '1.0.3',
+      base_revision: 'c55e64ec712a688f27e80d0be08f8db256da0a08',
+      current_revision: '1db318d0ab9d2185df284356d43b0af923558fd2\n'
+    },
+    uuid: 'd956c677-ca99-4642-a4c8-c53a1ed15f51',
+    klass: 'SegmentKlass',
+    layers: {
+      assay: {
+        key: 'assay',
+        cols: 4,
+        label: 'Assay conditions',
+        fields: [
+          {
+            type: 'table',
+            field: 'Substrate',
+            label: 'Identity and purity of all  assay components',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [
+              {
+                id: '9b499cd0-5830-11ec-8e6d-e5da33a42746',
+                type: 'drag_molecule',
+                value: 'iupac;',
+                col_name: 'Component'
+              },
+              {
+                id: 'b39f5180-5830-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Purity',
+                value_system: 'p',
+                option_layers: 'percentage'
+              },
+              {
+                id: '70fb9360-5831-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Origin'
+              }
+            ],
+            option_layers: 'percentage',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'reaction',
+            label: 'Measured reaction',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'As a stoichiometrically balanced equation, e.g., 2 mol substrate oxidized per mol O2 consumed',
+            placeholder: 'e.g., 2 mol substrate oxidized per mol O2 consumed',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'Atemperature',
+            label: 'Assay temperature',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            option_layers: 'temperature',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'pressure',
+            label: 'Assay pressure',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            option_layers: 'pressure',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Atmosphere',
+            label: 'Atmosphere',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            description: '',
+            text_sub_fields: []
+          },
+          {
+            type: 'integer',
+            field: 'ApH',
+            label: 'Assay pH',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'measure',
+            label: 'Assay pH measurement',
+            default: '',
+            position: 7,
+            required: false,
+            sub_fields: [],
+            description: 'Describe how was the pH measured.',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'Buffer',
+            label: 'Buffer',
+            default: '',
+            position: 8,
+            required: false,
+            sub_fields: [
+              {
+                id: '54334ce0-5832-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '54d50b20-5832-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: 'ec48bb50-5deb-11ec-adac-635086d5aeb8',
+                type: 'text',
+                value: '',
+                col_name: 'Comment'
+              }
+            ],
+            description: 'Buffer and concentrations.',
+            placeholder: 'e.g., 100 mM Tris-HCl, 200 mM potassium phosphate,  including counter-ion',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'salt',
+            label: 'Metal salt',
+            default: '',
+            position: 9,
+            required: false,
+            sub_fields: [
+              {
+                id: '8b087880-5832-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '8b1e9890-5832-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: 'f115d3c0-5deb-11ec-adac-635086d5aeb8',
+                type: 'text',
+                value: '',
+                col_name: 'Comment'
+              }
+            ],
+            description: 'Metal salt(s) and concentrations.',
+            placeholder: 'e.g., 10 mM KCl, 1.0 mM MgSO4',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'Other',
+            label: 'Other assay components',
+            default: '',
+            position: 10,
+            required: false,
+            sub_fields: [
+              {
+                id: 'b0674610-5832-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: 'b0e96e60-5832-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: 'f5b12dd0-5deb-11ec-adac-635086d5aeb8',
+                type: 'text',
+                value: '',
+                col_name: 'Comment'
+              }
+            ],
+            placeholder: 'e.g., 1.0 mM EDTA, 1.0 mM dithiothreitol',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Coupled',
+            label: 'Coupled assay components ',
+            default: '',
+            position: 11,
+            required: false,
+            sub_fields: [],
+            description: 'if relevant',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'ranges',
+            label: 'Substrate and concentration ranges',
+            default: '',
+            position: 12,
+            required: false,
+            sub_fields: [
+              {
+                id: '0ba175f0-5833-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '0bb991d0-5833-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Start concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: '36e11b30-5dec-11ec-adac-635086d5aeb8',
+                type: 'system-defined',
+                value: '',
+                col_name: 'End concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              }
+            ],
+            placeholder: 'e.g., 1 - 100 mM glucose, 5 mM ATP',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'concentration',
+            label: 'Enzyme molarity',
+            default: '',
+            position: 13,
+            required: false,
+            sub_fields: [],
+            option_layers: 'molarity',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'mconcentration',
+            label: 'Enzyme mass concentration',
+            default: '',
+            position: 14,
+            required: false,
+            sub_fields: [],
+            option_layers: 'concentration',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'Varied',
+            label: 'Varied components',
+            default: '',
+            position: 15,
+            required: false,
+            sub_fields: [
+              {
+                id: '45335090-5833-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '48262ac0-5833-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Start concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: '56ac7310-5dec-11ec-adac-635086d5aeb8',
+                type: 'system-defined',
+                value: '',
+                col_name: 'End concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              }
+            ],
+            description: 'e.g. inhibitor concentration',
+            placeholder: '',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'ionic',
+            label: 'Mixture ionic strength',
+            default: '',
+            position: 16,
+            required: false,
+            sub_fields: [],
+            description: 'Total assay mixture ionic strength',
+            option_layers: 'molarity',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'Comments',
+            label: 'Comments',
+            default: '',
+            position: 17,
+            required: false,
+            sub_fields: [],
+            description: 'Any comment on the above data. e.g., If pH is adjusted by addition of acid or base not shown in buffer name, make this clear –  e.g., 50 mM sodium acetate adjusted with HCl.',
+            text_sub_fields: []
+          }
+        ],
+        position: 5
+      },
+      storage: {
+        key: 'storage',
+        cols: 4,
+        label: 'Storage conditions',
+        fields: [
+          {
+            type: 'checkbox',
+            field: 'frozen',
+            label: 'Frozen',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'freezingt',
+            label: 'Freezing temperature',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            option_layers: 'temperature',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'freezing',
+            label: 'Freezing method',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            placeholder: 'e.g., flash',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'Stemperature',
+            label: 'Storage temperature',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            description: 'The temperature at which the enzyme is stored',
+            option_layers: 'temperature',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Atmosphere',
+            label: 'Atmosphere',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            placeholder: 'e.g., Air',
+            text_sub_fields: []
+          },
+          {
+            type: 'integer',
+            field: 'pH',
+            label: 'pH',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            description: 'The pH of the stored enzyme solution',
+            placeholder: 'e.g., 7.0',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'pHT',
+            label: 'pH temperature',
+            default: '',
+            position: 7,
+            required: false,
+            sub_fields: [],
+            description: 'At which temperature was the pH  measured.',
+            option_layers: 'temperature',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'thawing',
+            label: 'Thawing procedure',
+            default: '',
+            position: 8,
+            required: false,
+            sub_fields: [],
+            description: 'Statement about the thawing procedure.',
+            placeholder: 'e.g., on ice',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'Buffer',
+            label: 'pH-Buffer',
+            default: '',
+            position: 9,
+            required: false,
+            sub_fields: [
+              {
+                id: 'd10a8430-582e-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: 'd1a6c430-582e-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: 'e4a73810-5de9-11ec-b150-952b213f6620',
+                type: 'text',
+                value: '',
+                col_name: 'Comment'
+              }
+            ],
+            description: 'Buffer and concentrations (including  counter-ion). ',
+            placeholder: 'e.g., 200 mM potassium phosphate, 100 mM HEPES- KOH',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'salt',
+            label: 'Metal salt',
+            default: '',
+            position: 10,
+            required: false,
+            sub_fields: [
+              {
+                id: '34832580-582f-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '34ec6ea0-582f-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: 'f6322f90-5de9-11ec-b150-952b213f6620',
+                type: 'text',
+                value: '',
+                col_name: 'Comment'
+              }
+            ],
+            description: 'Metal salt(s) and concentrations',
+            placeholder: 'e.g., 10 mM KCl, 1.0 mM MgSO4',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'Other',
+            label: 'Other components',
+            default: '',
+            position: 11,
+            required: false,
+            sub_fields: [
+              {
+                id: '5c909850-582f-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '60277ab0-582f-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: '11edf2a0-5dea-11ec-b150-952b213f6620',
+                type: 'text',
+                value: '',
+                col_name: 'Comment'
+              }
+            ],
+            description: 'Other components and concentrations ',
+            placeholder: 'e.g., 1.0 mM EDTA, 1.0 mM dithiothreitol, 10%  glycerol, 20% DMSO, 1 mg/ml PEG2000, 2 mg/ml  BSA, peptidase inhibitors',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'concentration',
+            label: 'Enzyme molarity',
+            default: '',
+            position: 12,
+            required: false,
+            sub_fields: [],
+            option_layers: 'molarity',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'Mconcentration',
+            label: 'Enzyme mass concentration',
+            default: '',
+            position: 13,
+            required: false,
+            sub_fields: [],
+            option_layers: 'concentration',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'loss',
+            label: 'Approximate loss of activity ',
+            default: '',
+            position: 14,
+            required: false,
+            sub_fields: [],
+            description: 'Statement about observed loss of activity under the above conditions.',
+            placeholder: 'e.g., less than 10% loss after 1 month',
+            option_layers: 'percentage',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'ltime',
+            label: 'Activity loss time',
+            default: '',
+            position: 15,
+            required: false,
+            sub_fields: [],
+            description: 'Time after which activity loss was observed',
+            option_layers: 'duration',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'Comments',
+            label: 'Comments',
+            default: '',
+            position: 16,
+            required: false,
+            sub_fields: [],
+            description: 'Any comment on the above data. ',
+            text_sub_fields: []
+          }
+        ],
+        position: 4
+      },
+      activity: {
+        key: 'activity',
+        cols: 4,
+        label: 'Activity',
+        fields: [
+          {
+            type: 'system-defined',
+            field: 'rate',
+            label: 'Initial rates',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            description: 'Initial rate of the reaction measured',
+            option_layers: 'reaction_rate',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'rateD',
+            label: 'Initial rate details',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'Determine how initial rate was established. Estimate ranges in  substrate/product concentrations at the last data  point.',
+            placeholder: 'e.g., true initial tangent',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'Eactivity',
+            label: 'Enzyme activity',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            option_layers: 'enzyme_activity',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'kcat',
+            label: 'kcat',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            option_layers: 'turnover_number',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'range',
+            label: 'Start concentration',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            description: 'Specify at which (range of) enzyme concentration(s) enzyme activity was determined.',
+            option_layers: 'molarity',
+            text_sub_fields: []
+          },
+          {
+            type: 'system-defined',
+            field: 'Endconcentration',
+            label: 'End concentration',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            description: 'Specify at which (range of) enzyme concentration(s) enzyme activity was determined.',
+            option_layers: 'molarity',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'Comments',
+            label: 'Comments',
+            default: '',
+            position: 7,
+            required: false,
+            sub_fields: [],
+            description: 'Any comment on the above data. ',
+            text_sub_fields: []
+          }
+        ],
+        position: 6
+      },
+      identity: {
+        key: 'identity',
+        cols: 4,
+        color: 'none',
+        label: 'Identity of the enzyme',
+        style: 'panel_generic_heading',
+        fields: [
+          {
+            type: 'text',
+            field: 'Name',
+            label: 'Name of reaction catalyst',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            description: 'Name, preferably the accepted name from the IUBMB  Enzyme List',
+            placeholder: 'e.g., Carboxylic ester hydrolases',
+            text_sub_fields: []
+          },
+          {
+            type: 'integer',
+            field: 'EC',
+            label: 'EC number',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'The Enzyme Commission number',
+            placeholder: 'e.g., 3.4.11.4 ',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'accession',
+            label: 'Uniprot accession number',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            description: '',
+            text_sub_fields: []
+          },
+          {
+            type: 'integer',
+            field: 'Organism',
+            label: 'Organism',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            description: 'NCBI Taxonomy ID',
+            placeholder: 'e.g., 9606',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Oligomeric',
+            label: 'Oligomeric state',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            description: 'Number of different subunits.',
+            placeholder: 'e.g., 2a, 2b',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'reaction',
+            label: 'Reaction equation ',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            description: 'Fully balanced chemical reaction equation, elements and charges balanced. ',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'sequence',
+            label: 'sequence',
+            default: '',
+            position: 7,
+            required: false,
+            sub_fields: [],
+            description: 'If the sequence doesn\'t have an accession number, please provide the full sequence',
+            text_sub_fields: []
+          }
+        ],
+        position: 1
+      },
+      material: {
+        key: 'material',
+        cols: 2,
+        color: 'none',
+        label: 'Additional material desirable',
+        style: 'panel_generic_heading',
+        fields: [
+          {
+            type: 'table',
+            field: 'constant',
+            label: 'Free metal cation concentrations',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [
+              {
+                id: 'a9071e50-5840-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: 'a93bc2e0-5840-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: 'a9b55fb0-5840-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'How concentration calculated'
+              }
+            ],
+            placeholder: 'e.g., 2',
+            text_sub_fields: []
+          }
+        ],
+        position: 9
+      },
+      additional: {
+        key: 'additional',
+        cols: 3,
+        label: 'Additional information on the enzyme',
+        fields: [
+          {
+            type: 'text',
+            field: 'Isoenzyme',
+            label: 'Isoenzyme',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            description: 'Naturally occurring variant or indication of selection of alternative',
+            placeholder: 'e.g., Hexokinase-1',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Tissue',
+            label: 'Tissue',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'The source of an enzyme comprising tissue, preferably from BRENDA Tissue Ontology (BTO)',
+            placeholder: 'e.g., epineurium',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Organelle',
+            label: 'Organelle',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            description: 'The source of an enzyme comprising organelle, preferably from Gene Ontology (GO)',
+            placeholder: 'e.g., lysosome',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Localization',
+            label: 'Localization',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            description: 'Within cell. Specify what localization is based on. preferably from NCI Thesaurus',
+            placeholder: 'e.g., Cellular Membrane',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'modification',
+            label: 'Post-translational modification',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            description: 'Add only when determined, preferably from PSI-MOD',
+            placeholder: '',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Sequencemodifications',
+            label: 'Sequence modifications',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            text_sub_fields: []
+          }
+        ],
+        position: 2
+      },
+      equilibrium: {
+        key: 'equilibrium',
+        cols: 2,
+        label: 'Equilibrium measurements',
+        fields: [
+          {
+            type: 'textarea',
+            field: 'Evidence',
+            label: 'Evidence that reaction reached equilibrium',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            description: 'e.g., approached from both (or all if multiple substrates/products) directions',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Complexing',
+            label: 'Complexing metal ions',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'if the reaction involved species that might bind these  (e.g., phosphate esters), essential to report estimated  pMg and/or pCa',
+            text_sub_fields: []
+          },
+          {
+            type: 'integer',
+            field: 'pMg',
+            label: 'pMg',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            text_sub_fields: []
+          },
+          {
+            type: 'integer',
+            field: 'pCa',
+            label: 'pCa',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'directly',
+            label: 'State which of all reactants were measured directly',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [
+              {
+                id: 'cde631c0-7ab4-11ec-b768-23aca4358195',
+                type: 'text',
+                value: '',
+                col_name: 'Reactant'
+              },
+              {
+                id: 'd824b8f0-7ab4-11ec-b768-23aca4358195',
+                type: 'text',
+                value: '',
+                col_name: 'Was it measured directly?'
+              }
+            ],
+            description: 'e.g., glucose phosphate and glucose measured  directly, excess phosphate estimated by mass balance',
+            text_sub_fields: []
+          },
+          {
+            type: 'table',
+            field: 'Range',
+            label: 'Concentrations ranges',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [
+              {
+                id: '95811b20-5835-11ec-8e6d-e5da33a42746',
+                type: 'text',
+                value: '',
+                col_name: 'Name'
+              },
+              {
+                id: '9a9bb750-5835-11ec-8e6d-e5da33a42746',
+                type: 'system-defined',
+                value: '',
+                col_name: 'Start concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: '29b21670-5e7e-11ec-adac-635086d5aeb8',
+                type: 'system-defined',
+                value: '',
+                col_name: 'End concentration',
+                value_system: 'mol_l',
+                option_layers: 'molarity'
+              },
+              {
+                id: '2a5de6d0-5e7e-11ec-adac-635086d5aeb8',
+                type: 'text',
+                value: 'initial vs equilibrium',
+                col_name: 'Time point'
+              }
+            ],
+            description: 'Range of all initial and measured equilibrium concentrations of the starting material and products in the experiment ',
+            text_sub_fields: []
+          }
+        ],
+        position: 7
+      },
+      methodology: {
+        key: 'methodology',
+        cols: 1,
+        color: 'none',
+        label: 'Methodology',
+        style: 'panel_generic_heading',
+        fields: [
+          {
+            type: 'text',
+            field: 'method',
+            label: 'Assay method name',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            description: 'a literature reference may suffice for an established  procedure but any modification should be detailed',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'link',
+            label: 'Method reference',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'a literature reference may suffice for an established procedure but any modification should be detailed',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'mod',
+            label: 'Description',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            description: 'any modification on the method, or full description if not an established procedure',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'assay',
+            label: 'Type of assay',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            description: 'e.g., continuous or discontinuous, direct or coupled',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'Reaction',
+            label: 'Reaction stopping procedure',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            description: 'In the case of discontinuous assays',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'Direction',
+            label: 'Direction of the assay ',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            description: 'With respect to the reaction equation provided e.g., NAD reduction by alcohol dehydrogenase;  alcohol + NAD+ -> aldehyde or ketone + NADH + H+',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Reactant',
+            label: 'Reactant determined',
+            default: '',
+            position: 7,
+            required: false,
+            sub_fields: [],
+            placeholder: 'e.g., NADH formation, O2 utilization',
+            text_sub_fields: []
+          }
+        ],
+        position: 8
+      },
+      preparation: {
+        key: 'preparation',
+        cols: 2,
+        color: 'none',
+        label: 'Preparation',
+        style: 'panel_generic_heading',
+        fields: [
+          {
+            type: 'checkbox',
+            field: 'Purified',
+            label: 'Purified',
+            default: '',
+            position: 1,
+            required: false,
+            sub_fields: [],
+            description: 'Specify whether  protein or enzyme was purified.',
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'purity',
+            label: 'Purity criteria',
+            default: '',
+            position: 2,
+            required: false,
+            sub_fields: [],
+            description: 'Methodology for purification',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Artificial',
+            label: 'Artificial modification',
+            default: '',
+            position: 3,
+            required: false,
+            sub_fields: [],
+            description: '',
+            placeholder: 'e.g., truncated, His-tagged, fusion protein, lacking native glycosylation...',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'Metalloenzyme',
+            label: 'Metalloenzyme mutation',
+            default: '',
+            position: 4,
+            required: false,
+            sub_fields: [],
+            description: '',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'content',
+            label: 'Metalloenzyme content',
+            default: '',
+            position: 5,
+            required: false,
+            sub_fields: [],
+            placeholder: '',
+            text_sub_fields: []
+          },
+          {
+            type: 'text',
+            field: 'cofactors',
+            label: 'Metalloenzyme cofactors',
+            default: '',
+            position: 6,
+            required: false,
+            sub_fields: [],
+            text_sub_fields: []
+          },
+          {
+            type: 'textarea',
+            field: 'Description',
+            label: 'Description',
+            default: '',
+            position: 7,
+            required: false,
+            sub_fields: [],
+            description: 'Commercial source, procedure used or reference along with modifications...',
+            text_sub_fields: []
+          }
+        ],
+        position: 3
+      }
+    },
+    select_options: {}
+  }
